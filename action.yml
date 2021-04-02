@@ -8,9 +8,6 @@ inputs:
     description: 'Path to output file. defaults to thirdparties.json'
     default: 'thirdparties.json'
     required: true
-# runs:
-#   using: 'node12'
-#   main: 'dist/index.js'
 
 runs:
   using: "composite"
