@@ -8,6 +8,15 @@ inputs:
     description: 'Path to output file. defaults to thirdparties.json'
     default: 'thirdparties.json'
     required: true
+# runs:
+#   using: 'node12'
+#   main: 'dist/index.js'
+
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+        node src/scan ${{ inputs.url }} > ${{ inputs.output }}
