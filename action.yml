@@ -1,0 +1,13 @@
+name: 'Run ThirdParties scan'
+description: 'Run a third-party scripts scan on an URL'
+inputs:
+  url: 
+    description: 'URL ro scan'
+    required: true
+  output:
+    description: 'Path to output file. defaults to thirdparties.json'
+    default: 'thirdparties.json'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
