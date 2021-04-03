@@ -16,4 +16,4 @@ runs:
       run: |
         cd ${{ github.action_path }}
         yarn
-        node src/scan ${{ inputs.url }} > ${{ inputs.output }}
+        node src/scan ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }}
