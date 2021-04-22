@@ -34,7 +34,7 @@
     "maxmind": "^4.3.1",
     "node-fetch": "^2.6.1",
     "p-all": "^3.0.0",
-    "puppeteer": "^8.0.0",
+    "puppeteer": "^9.0.0",
     "splitted-url": "^1.0.16"
   },
   "devDependencies": {
