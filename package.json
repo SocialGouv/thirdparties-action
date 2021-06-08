@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/socialgouv/thirdparties-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.7",
+    "@actions/core": "^1.4.0",
     "@socialgouv/thirdparties": "^1.0.0",
     "geolite2-redist": "^2.0.3",
     "lodash.uniq": "^4.5.0",
