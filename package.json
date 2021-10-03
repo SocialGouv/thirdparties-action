@@ -28,14 +28,14 @@
   "homepage": "https://github.com/socialgouv/thirdparties-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.7",
-    "@socialgouv/thirdparties": "^1.0.0",
-    "geolite2-redist": "^2.0.3",
+    "@socialgouv/thirdparties": "^1.0.1",
+    "geolite2-redist": "^2.0.4",
     "lodash.uniq": "^4.5.0",
-    "maxmind": "^4.3.1",
-    "node-fetch": "^2.6.1",
+    "maxmind": "^4.3.2",
+    "node-fetch": "^2.6.5",
     "p-all": "^3.0.0",
     "puppeteer": "^9.1.1",
-    "splitted-url": "^1.0.17"
+    "splitted-url": "^1.0.19"
   },
   "devDependencies": {
     "eslint": "^7.26.0",
