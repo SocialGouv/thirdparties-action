@@ -11,7 +11,7 @@ inputs:
 outputs:
   third-parties-output:
     description: "Third parties json as output string"
-    value: ${{ steps.thirdparties.json-ouput }}
+    value: ${{ steps.thirdparties.outputs.json-ouput }}
 
 runs:
   using: "composite"
