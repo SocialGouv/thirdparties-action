@@ -9,7 +9,7 @@ inputs:
     default: "thirdparties.json"
     required: true
 outputs:
-  trackers:
+  thirdpartiesJson:
     description: "Third parties json as output string"
     value: ${{ steps.thirdparties.outputs.jsonOutput }}
 
