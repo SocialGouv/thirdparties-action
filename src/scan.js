@@ -95,7 +95,7 @@ if (require.main === module) {
   const url = process.argv[process.argv.length - 1];
   scan(url)
     .then((results) => {
-      console.log(JSON.stringify(results));
+      console.log(JSON.stringify(results, null, 2));
     })
     .catch(console.log);
 }
