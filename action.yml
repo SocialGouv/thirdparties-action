@@ -9,9 +9,9 @@ inputs:
     default: "thirdparties.json"
     required: true
 outputs:
-  third-parties-output:
+  trackers:
     description: "Third parties json as output string"
-    value: ${{ steps.thirdparties.outputs.json-ouput }}
+    value: ${{ fromJson(steps.thirdparties.outputs.json-output).trackers }}
 
 runs:
   using: "composite"
@@ -21,4 +21,4 @@ runs:
       run: |
         cd ${{ github.action_path }}
         yarn
-        echo "::set-output name=json-ouput::$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})"
+        echo "::set-output name=json-output::$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})"
