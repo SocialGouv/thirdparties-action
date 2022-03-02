@@ -22,4 +22,5 @@ runs:
         cd ${{ github.action_path }}
         yarn
         JSON_OUTPUT=$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})
-        echo "::set-output name=jsonOutput::${JSON_OUTPUT//'%'/'%25'}"
+        JSON_OUTPUT_FORMATTED=$(echo $JSON_OUTPUT | sed 's/ //g')
+        echo "::set-output name=jsonOutput::$JSON_OUTPUT_FORMATTED"
