@@ -24,4 +24,3 @@ runs:
         JSON_OUTPUT=$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})
         JSON_OUTPUT_FORMATTED=$(echo $JSON_OUTPUT | sed 's/ //g')
         echo "::set-output name=jsonOutput::$JSON_OUTPUT_FORMATTED"
-        ${{ fromJson($JSON_OUTPUT_FORMATTED) }}
