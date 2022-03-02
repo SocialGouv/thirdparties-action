@@ -16,4 +16,4 @@ runs:
       run: |
         cd ${{ github.action_path }}
         yarn
-        echo "::set-output name=third-parties-output::$(node src/scan ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }})"
+        echo "::set-output name=third-parties-output::$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})"
