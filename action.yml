@@ -1,12 +1,12 @@
-name: 'Run ThirdParties scan'
-description: 'Run a third-party scripts scan on an URL'
+name: "Run ThirdParties scan"
+description: "Run a third-party scripts scan on an URL"
 inputs:
-  url: 
-    description: 'URL ro scan'
+  url:
+    description: "URL ro scan"
     required: true
   output:
-    description: 'Path to output file. defaults to thirdparties.json'
-    default: 'thirdparties.json'
+    description: "Path to output file. defaults to thirdparties.json"
+    default: "thirdparties.json"
     required: true
 
 runs:
@@ -16,4 +16,4 @@ runs:
       run: |
         cd ${{ github.action_path }}
         yarn
-        node src/scan ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }}
+        echo "::set-output name=third-parties-output::$(node src/scan ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }})"
