@@ -9,9 +9,9 @@ inputs:
     default: "thirdparties.json"
     required: true
 outputs:
-  thirdpartiesJson:
+  json:
     description: "Third parties json as output string"
-    value: ${{ steps.thirdparties.outputs.jsonOutput }}
+    value: ${{ steps.thirdparties.outputs.json }}
 
 runs:
   using: "composite"
@@ -23,4 +23,4 @@ runs:
         yarn
         JSON_OUTPUT=$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})
         JSON_OUTPUT_FORMATTED=$(echo $JSON_OUTPUT | sed 's/ //g')
-        echo "::set-output name=jsonOutput::$JSON_OUTPUT_FORMATTED"
+        echo "::set-output name=json::$JSON_OUTPUT_FORMATTED"
