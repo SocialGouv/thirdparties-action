@@ -1,19 +1,26 @@
-name: 'Run ThirdParties scan'
-description: 'Run a third-party scripts scan on an URL'
+name: "Run ThirdParties scan"
+description: "Run a third-party scripts scan on an URL"
 inputs:
-  url: 
-    description: 'URL ro scan'
+  url:
+    description: "URL ro scan"
     required: true
   output:
-    description: 'Path to output file. defaults to thirdparties.json'
-    default: 'thirdparties.json'
+    description: "Path to output file. defaults to thirdparties.json"
+    default: "thirdparties.json"
     required: true
+outputs:
+  json:
+    description: "Third parties json as output string"
+    value: ${{ steps.thirdparties.outputs.json }}
 
 runs:
   using: "composite"
   steps:
-    - shell: bash
+    - id: thirdparties
+      shell: bash
       run: |
         cd ${{ github.action_path }}
         yarn
-        node src/scan ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }}
+        JSON_OUTPUT=$(node src/scan ${{ inputs.url }} | tee -a ${{ github.workspace }}/${{ inputs.output }})
+        JSON_OUTPUT_FORMATTED=$(echo $JSON_OUTPUT | sed 's/ //g')
+        echo "::set-output name=json::$JSON_OUTPUT_FORMATTED"
