@@ -33,7 +33,7 @@
     "lodash.uniq": "^4.5.0",
     "maxmind": "^4.3.2",
     "node-fetch": "^2.6.6",
-    "p-all": "^3.0.0",
+    "p-all": "^4.0.0",
     "puppeteer": "^14.2.1",
     "splitted-url": "^1.0.20"
   },
