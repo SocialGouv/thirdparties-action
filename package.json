@@ -31,10 +31,10 @@
     "@socialgouv/thirdparties": "^1.0.1",
     "geolite2-redist": "^2.0.4",
     "lodash.uniq": "^4.5.0",
-    "maxmind": "^4.3.2",
+    "maxmind": "^4.3.6",
     "node-fetch": "^2.6.6",
     "p-all": "^3.0.0",
-    "puppeteer": "^9.1.1",
+    "puppeteer": "^14.2.1",
     "splitted-url": "^1.0.20"
   },
   "devDependencies": {
