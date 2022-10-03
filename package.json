@@ -31,7 +31,7 @@
     "@socialgouv/thirdparties": "^1.0.1",
     "geolite2-redist": "^2.0.4",
     "lodash.uniq": "^4.5.0",
-    "maxmind": "^4.3.2",
+    "maxmind": "^4.3.7",
     "node-fetch": "^2.6.6",
     "p-all": "^3.0.0",
     "puppeteer": "^14.2.1",
