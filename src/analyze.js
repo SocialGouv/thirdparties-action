@@ -14,6 +14,10 @@ const legitDomains = [
   ".cnrs.fr",
   ".gouv.fr",
   ".gouvernement.fr",
+  ".pole-emploi.fr",
+  ".incubateur.net",
+  ".mediateur-public.fr",
+  ".clever-cloud.com",
 ].map((d) => new RegExp(d, "i"));
 
 /**
