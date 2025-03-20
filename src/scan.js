@@ -36,6 +36,7 @@ const scan = (url) =>
   puppeteer
     .launch({
       ignoreHTTPSErrors: true,
+      args: ['--no-sandbox'],
     })
     .then((browser) =>
       analyzeUrl(browser, url)
